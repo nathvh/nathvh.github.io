@@ -47,7 +47,7 @@
 
     
     <div class="nav-screen"></div>
-    <nav class="nav-list"><ul><li><a href="/root">Root</a></li><li><a href="/java">Java</a><ul><li><a href="/java/java11_17">Changement entre Java 11 et Java 17 (v1.2022.05.25)</a></li></ul></li><li><a href="/about">About</a><ul></ul></li></ul></li></nav>
+    <nav class="nav-list"><ul><li><a href="/root">Root</a></li><li><a href="/java">Java</a><ul><li><a href="/java/java11_17">Changement entre Java 11 et Java 17 (v1.2022.05.25)</a></li><li><a href="/java/java11_17_fiche" class="current-page">Changement entre Java 11 et Java 17 (v1.2022.05.25)</a></li></ul></li><li><a href="/about">About</a><ul></ul></li></ul></li></nav>
     
 
     <div class="page-content-main">
@@ -66,37 +66,46 @@
 
         <div class="post-content"><h1 id="switch-case">Switch Case</h1>
 <ul>
-<li>case multiple avec un séparateur <code>,</code> [^java 14]</li>
-<li><code>-&gt;</code> remplace <code>;</code> et évite le <code>break</code> (java 12)</li>
-<li><code>-&gt;</code> peut être utilisé pour renvoyer une valeur (java 14)</li>
-<li><code>-&gt;</code> switch sur un <code>Object</code> avec cast à la volée (java17)</li>
+<li>case multiple avec un
+séparateur <code>,</code> <a href="https://www.oracle.com/java/technologies/javase/14all-relnotes.html#NewFeature">@since Java 14</a></li>
+<li><code>-&gt;</code> remplace <code>:</code> et évite
+le <code>break</code> <a href="https://www.oracle.com/java/technologies/javase/12all-relnotes.html#NewFeature">@since Java 12</a></li>
+<li><code>-&gt;</code> peut être utilisé pour renvoyer une
+valeur <a href="https://www.oracle.com/java/technologies/javase/14all-relnotes.html#NewFeature">@since Java 14</a>
+```</li>
+<li><code>-&gt;</code> switch sur le type pour <em>caster</em> à la
+volée <a href="https://www.oracle.com/java/technologies/javase/17all-relnotes.html#NewFeature">@since Java 17</a></li>
 </ul>
 <h1 id="class-modifier">Class modifier</h1>
 <ul>
-<li><code>record</code> : nouveau type de class : immutable et génère <code>getter/hashCode/equals</code> (java 14)</li>
-<li><code>sealed</code> : afin de verrouiller les possibilité d&#39;héritage (java 16)</li>
+<li><code>record</code> : nouveau type de class : immutable et
+génère <code>getter/hashCode/equals</code> <a href="https://www.oracle.com/java/technologies/javase/14all-relnotes.html#NewFeature">@since Java 14</a></li>
+<li><code>sealed</code> : afin de verrouiller les possibilités
+d&#39;héritage <a href="https://www.oracle.com/java/technologies/javase/16all-relnotes.html#NewFeature">@since Java 16</a></li>
 </ul>
 <h1 id="formatage">Formatage</h1>
 <ul>
-<li><code>NumberFormat</code> : ajout d&#39;un formatage <code>SHORT</code> : 10k, 1M, etc. (java 12)</li>
-<li><code>NumberFormat</code> : ajout d&#39;un formatage <code>LONG</code>; avec <code>Locale</code> : A million, 2 mille, etc. (java 14)</li>
-<li><code>NumberFormat</code> : ajout d’un formatage monnaie, avec <code>Locale</code> : $3.24, 5,61€, etc. (java 14)</li>
-<li><code>DateTimeFormatter</code> : ajout du cycle, avec <code>Locale</code> : Matin, Après-midi, etc. (java 16)</li>
+<li><code>NumberFormat</code> : ajout d&#39;un formatage <code>SHORT</code> : 10k, 1M,
+etc. <a href="https://www.oracle.com/java/technologies/javase/12all-relnotes.html#NewFeature">@since Java 12</a></li>
+<li><code>NumberFormat</code> : ajout d&#39;un formatage <code>LONG</code>; avec <code>Locale</code> : A million, 2 mille,
+etc. <a href="https://www.oracle.com/java/technologies/javase/14all-relnotes.html#NewFeature">@since Java 14</a></li>
+<li><code>NumberFormat</code> : ajout d’un formatage monnaie, avec <code>Locale</code> : $3.24, 5,61€,
+etc. <a href="https://www.oracle.com/java/technologies/javase/14all-relnotes.html#NewFeature">@since Java 14</a></li>
+<li><code>DateTimeFormatter</code> : ajout du cycle, avec <code>Locale</code> : Matin, Après-midi,
+etc. <a href="https://www.oracle.com/java/technologies/javase/16all-relnotes.html#NewFeature">@since Java 16</a></li>
 </ul>
 <h1 id="divers">Divers</h1>
 <ul>
-<li><code>String</code> : bloc String multiligne avec <code>&quot;&quot;&quot;</code> (java 13)</li>
-<li><code>Exception</code> : meilleur message de debug sur les <code>Exception</code>, en particulier les <code>NullpointerException</code> (java17)</li>
-<li><code>instanceof</code> : peut être suivi d&#39;un nom de variable afin de caster immédiatement (java 16)</li>
-<li><code>Stream.toList</code> : afin d’éviter de passer par un <code>.collect()</code> (java 16)</li>
+<li><code>String</code> : bloc String multiligne
+avec <code>&quot;&quot;&quot;</code> <a href="https://www.oracle.com/java/technologies/javase/13all-relnotes.html#NewFeature">@since Java 13</a></li>
+<li><code>Exception</code> : meilleur message de debug sur les <code>Exception</code>, en particulier
+les <code>NullpointerException</code> <a href="https://www.oracle.com/java/technologies/javase/17all-relnotes.html#NewFeature">@since Java 17</a></li>
+<li><code>instanceof</code> : peut être suivi d&#39;un nom de variable afin de caster
+immédiatement <a href="https://www.oracle.com/java/technologies/javase/16all-relnotes.html#NewFeature">@since Java 16</a></li>
+<li><code>Stream.toList</code> : afin d’éviter de passer
+par un <code>.collect()</code> <a href="https://www.oracle.com/java/technologies/javase/16all-relnotes.html#NewFeature">@since Java 16</a></li>
 </ul>
-<p>[^java 14]: /java/[Java 14](#<a href="https://www.oracle.com/java/technologies/javase/14all-relnotes.html">https://www.oracle.com/java/technologies/javase/14all-relnotes.html</a></p>
-<p><a href="/java/java11_17_fiche#https://www.oracle.com/java/technologies/javase/12all-relnotes.html">Java 12</a>
-<a href="/java/java11_17_fiche#https://www.oracle.com/java/technologies/javase/13all-relnotes.html">Java 13</a>
-<a href="/java/java11_17_fiche#https://www.oracle.com/java/technologies/javase/14all-relnotes.html">Java 14</a>
-<a href="/java/java11_17_fiche#https://www.oracle.com/java/technologies/javase/15all-relnotes.html">Java 15</a>
-<a href="/java/java11_17_fiche#https://www.oracle.com/java/technologies/javase/16all-relnotes.html">Java 16</a>
-<a href="/java/java11_17_fiche#https://www.oracle.com/java/technologies/javase/17all-relnotes.html">Java 17</a></p>
+<p>la source</p>
 </div>
       </article>
 
