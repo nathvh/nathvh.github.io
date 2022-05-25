@@ -1,13 +1,13 @@
 ---
-title: Home
-navOrder: java about
+title: Root
+navOrder: root java about
 toc : true
 ---
 
 # Pourquoi un énième site technique pour les dévs ?
 
 Le but de ce site est de faire des formats courts.  
-Tu trouveras facilement énormément de sources diverses pour de longues explications.  
+Tu trouveras facilement énormément de sources diverses et variées pour de longues explications très détaillées.  
 Ici, tu ne trouveras pas de longues explications, mais deux formats :
 
 - Le _Descriptif technique_ qui présente les choses, rapidement et clairement.
@@ -35,4 +35,4 @@ une issue ou même pourquoi une PR !
 Non, tu as aussi à disposition [ici](dev-pratique-rss.xml) un [flux RSS](https://fr.wikipedia.org/wiki/RSS) afin de te tenir au courant sans avoir à passer tous
 les jours !
 
-Et je ferais en sorte de te donner un max de liens si tu veux plus d'informations
+Et je ferais en sorte de te donner un max de liens si tu veux plus d'informations.

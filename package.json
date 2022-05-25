@@ -4,7 +4,8 @@
   "description": "Le site des fiches pratiques pour faciliter la vie des Dévs",
   "scripts": {
     "docs:build": "markdown-docs build docs-src docs",
-    "docs:dev": "markdown-docs dev docs-src"
+    "docs:dev": "markdown-docs dev docs-src",
+    "docs:bd": " markdown-docs dev --destination docs docs-src"
   },
   "devDependencies": {
     "@gi60s/markdown-docs": "^0.1.2"
