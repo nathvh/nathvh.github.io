@@ -2,4 +2,4 @@
 
 _Le blog des fiches pratiques pour faciliter la vie des Dévs_
 
-[Licence](LICENSE.md)
+Utilisation de https://gi60s.github.io/markdown-docs/ afin de généré les pages

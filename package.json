@@ -1,0 +1,12 @@
+{
+  "name": "dev-pratique",
+  "version": "0.0.1",
+  "description": "Le site des fiches pratiques pour faciliter la vie des Dévs",
+  "scripts": {
+    "docs:build": "markdown-docs build docs-src docs",
+    "docs:dev": "markdown-docs dev sheet"
+  },
+  "devDependencies": {
+    "@gi60s/markdown-docs": "^0.1.2"
+  }
+}
