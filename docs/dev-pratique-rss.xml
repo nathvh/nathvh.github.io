@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0">
+    <channel>
+        <title>Dev Pratique</title>
+        <link>https://nathvh.github.io/</link>
+        <description>Le site des fiches pratiques pour faciliter la vie des Dévs</description>
+        <language>fr-FR</language>
+        <item>
+            <title>Changement entre Java 11 et Java 17 (v1.2022.05.25)</title>
+            <link>https://nathvh.github.io/java/java11_17</link>
+            <guid>https://nathvh.github.io/</guid>
+            <pubDate>Wed, 25 May 2022 00:00:00 GMT</pubDate>
+            <category>java</category>
+            <description>Tu vas avoir toutes les modifications qui vont te changer la vie de tous les jours sous les
+                yeux en une seule fois !
+            </description>
+        </item>
+    </channel>
+</rss>

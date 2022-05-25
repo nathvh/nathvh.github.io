@@ -1,0 +1,218 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Dev Pratique | Changement entre Java 11 et Java 17 (v1.2022.05.25)</title>
+  
+
+  <link rel="icon" href="/images/book-48.png">
+
+  <link rel="stylesheet" href="/template-files/styles/main.css" media="all">
+  
+  
+  <link rel="stylesheet" href="/css/main.css" media="all">
+  
+  
+  
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="wrapper">
+      <a class="site-title" href="">
+        Dev Pratique
+      </a>
+
+      
+      <nav class="site-nav">
+        <a href="#" class="menu-icon" aria-label="Menu">
+          <svg viewBox="0 0 18 15">
+            <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+            <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+            <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+          </svg>
+        </a>
+      </nav>
+      
+    </div>
+  </header>
+
+<div class="page-content">
+  <div class="wrapper">
+
+    
+    <div class="nav-screen"></div>
+    <nav class="nav-list"><ul><li><a href="">Home</a></li><li><a href="/java">Java</a><ul><li><a href="/java/java11_17" class="current-page">Changement entre Java 11 et Java 17 (v1.2022.05.25)</a></li></ul></li><li><a href="/about">About</a><ul></ul></li></ul></li></nav>
+    
+
+    <div class="page-content-main">
+      <article class="post">
+        <header class="post-header">
+          
+          <h1 class="post-title">Changement entre Java 11 et Java 17 (v1.2022.05.25)</h1>
+        </header>
+
+        
+        <div>
+          <p><strong>Page Content</strong></p>
+          <div class="section-nav"><ul class="toc"><li><a href="#switch-case">Switch Case</a></li><li><a href="#class-modifier">Class modifier</a></li><li><a href="#formatage">Formatage</a></li><li><a href="#divers">Divers</a></li><li><a href="#les-fiches">Les fiches</a></li></ul></div>
+        </div>
+        
+
+        <div class="post-content"><p><em>Tu vas avoir toutes les modifications qui vont te changer la vie de tous les jours sous les yeux en une seule fois !</em></p>
+<h1 id="switch-case">Switch Case</h1>
+<p><img src="/images/tips.png" alt="tips" title="Tips"> <em>Tu peux cumuler toutes ces fonctionnalités entre elles !</em></p>
+<ul>
+<li><p>case multiple avec un
+séparateur <code>,</code> <a href="https://www.oracle.com/java/technologies/javase/14all-relnotes.html#NewFeature">@since Java 14</a></p>
+<pre><code class="language-java"><span class="hljs-keyword">switch</span> (i) {
+  <span class="hljs-keyword">case</span> <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span> :
+    System.out.println(<span class="hljs-string">"Value is "</span> + i);
+    <span class="hljs-keyword">break</span>;
+  <span class="hljs-function"><span class="hljs-keyword">default</span> throw new <span class="hljs-title">IllegalArgumentException</span><span class="hljs-params">(<span class="hljs-string">"Number is to big"</span>)</span></span>;
+}</code></pre>
+</li>
+<li><p><code>-&gt;</code> remplace <code>:</code> et évite
+le <code>break</code> <a href="https://www.oracle.com/java/technologies/javase/12all-relnotes.html#NewFeature">@since Java 12</a></p>
+<pre><code class="language-java"><span class="hljs-keyword">switch</span> (i) {
+  <span class="hljs-keyword">case</span> <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span> -&gt; System.out.println(<span class="hljs-string">"Value is "</span> + i);
+  <span class="hljs-function"><span class="hljs-keyword">default</span> throw new <span class="hljs-title">IllegalArgumentException</span><span class="hljs-params">(<span class="hljs-string">"Number is to big"</span>)</span></span>;
+}</code></pre>
+</li>
+<li><p><code>-&gt;</code> peut être utilisé pour renvoyer une
+valeur <a href="https://www.oracle.com/java/technologies/javase/14all-relnotes.html#NewFeature">@since Java 14</a></p>
+<pre><code class="language-java">String vehicleType = <span class="hljs-keyword">switch</span> (wheelNumber) {
+  <span class="hljs-keyword">case</span> <span class="hljs-number">2</span> -&gt; <span class="hljs-string">"bicycle"</span>;
+  <span class="hljs-keyword">case</span> <span class="hljs-number">4</span> -&gt; <span class="hljs-string">"car"</span>;
+  <span class="hljs-keyword">default</span> -&gt; <span class="hljs-string">"Unknow vehicle"</span>;
+}</code></pre>
+</li>
+<li><p><code>-&gt;</code> switch sur le type pour <em>caster</em> à la
+volée <a href="https://www.oracle.com/java/technologies/javase/17all-relnotes.html#NewFeature">@since Java 17</a></p>
+<pre><code class="language-java"><span class="hljs-function"><span class="hljs-keyword">static</span> String <span class="hljs-title">getType</span><span class="hljs-params">(Object o)</span> </span>{
+  <span class="hljs-keyword">return</span> <span class="hljs-keyword">switch</span> (o) {
+    <span class="hljs-keyword">case</span> Integer i -&gt; String.format(<span class="hljs-string">"%d is an integer"</span>, i);
+    <span class="hljs-keyword">case</span> Long l    -&gt; String.format(<span class="hljs-string">"%d is a big integer!"</span>, l);
+    <span class="hljs-keyword">case</span> Double d  -&gt; String.format(<span class="hljs-string">"%f is a decimal number!"</span>, d);
+    <span class="hljs-keyword">case</span> String s  -&gt; String.format(<span class="hljs-string">"%s is a String!"</span>, s);
+    <span class="hljs-keyword">default</span>        -&gt; <span class="hljs-string">"Non reconnu"</span>; 
+  }
+}</code></pre>
+</li>
+</ul>
+<h1 id="class-modifier">Class modifier</h1>
+<ul>
+<li><p><code>record</code> : nouveau type de class : immutable et
+génère <code>getter/hashCode/equals</code> <a href="https://www.oracle.com/java/technologies/javase/14all-relnotes.html#NewFeature">@since Java 14</a></p>
+<pre><code class="language-java"><span class="hljs-function">record <span class="hljs-title">ColorRecord</span><span class="hljs-params">(<span class="hljs-keyword">int</span> red, <span class="hljs-keyword">int</span> green, <span class="hljs-keyword">int</span> blue)</span> </span>{};
+ColorRecord color = <span class="hljs-keyword">new</span> ColorRecord(<span class="hljs-number">255</span>, <span class="hljs-number">10</span>, <span class="hljs-number">10</span>);</code></pre>
+</li>
+<li><p><code>sealed</code> : afin de verrouiller les possibilités
+d&#39;héritage <a href="https://www.oracle.com/java/technologies/javase/16all-relnotes.html#NewFeature">@since Java 16</a></p>
+<pre><code class="language-java"><span class="hljs-keyword">abstract</span> sealed <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Person</span> <span class="hljs-title">permits</span> <span class="hljs-title">Employee</span>, <span class="hljs-title">Boss</span> </span>{
+ String name;
+}
+<span class="hljs-keyword">final</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Employee</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Person</span> </span>{
+ <span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">getEmployeeId</span><span class="hljs-params">()</span> </span>{
+    <span class="hljs-keyword">return</span> id;
+ }
+<span class="hljs-keyword">final</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Boss</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Person</span> </span>{ }
+
+<span class="hljs-keyword">final</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Customer</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Person</span> </span>{ } <span class="hljs-comment">// va générer une erreur à la compilation</span></code></pre>
+</li>
+</ul>
+<h1 id="formatage">Formatage</h1>
+<ul>
+<li><code>NumberFormat</code> : ajout d&#39;un formatage <code>SHORT</code> : 10k, 1M,
+etc. <a href="https://www.oracle.com/java/technologies/javase/12all-relnotes.html#NewFeature">@since Java 12</a><pre><code class="language-java">NumberFormat.getCompactNumberInstance(Locale.FR, NumberFormat.Style.SHORT);</code></pre>
+</li>
+<li><code>NumberFormat</code> : ajout d&#39;un formatage <code>LONG</code>; avec <code>Locale</code> : A million, 2 mille,
+etc. <a href="https://www.oracle.com/java/technologies/javase/14all-relnotes.html#NewFeature">@since Java 14</a><pre><code class="language-java">NumberFormat.getCompactNumberInstance(Locale.FR, NumberFormat.Style.LONG);</code></pre>
+</li>
+<li><code>NumberFormat</code> : ajout d’un formatage monnaie, avec <code>Locale</code> : $3.24, 5,61€,
+etc. <a href="https://www.oracle.com/java/technologies/javase/14all-relnotes.html#NewFeature">@since Java 14</a><ul>
+<li>Descriptif</li>
+</ul>
+</li>
+<li><code>DateTimeFormatter</code> : ajout du cycle, avec <code>Locale</code> : Matin, Après-midi,
+etc. <a href="https://www.oracle.com/java/technologies/javase/16all-relnotes.html#NewFeature">@since Java 16</a><ul>
+<li>Descriptif</li>
+</ul>
+</li>
+</ul>
+<h1 id="divers">Divers</h1>
+<ul>
+<li><code>String</code> : bloc String multiligne
+avec <code>&quot;&quot;&quot;</code> <a href="https://www.oracle.com/java/technologies/javase/13all-relnotes.html#NewFeature">@since Java 13</a><ul>
+<li>Descriptif</li>
+</ul>
+</li>
+<li><code>Exception</code> : meilleur message de debug sur les <code>Exception</code>, en particulier
+les <code>NullpointerException</code> <a href="https://www.oracle.com/java/technologies/javase/17all-relnotes.html#NewFeature">@since Java 17</a><ul>
+<li>Descriptif</li>
+</ul>
+</li>
+<li><code>instanceof</code> : peut être suivi d&#39;un nom de variable afin de caster
+immédiatement <a href="https://www.oracle.com/java/technologies/javase/16all-relnotes.html#NewFeature">@since Java 16</a><ul>
+<li>Descriptif</li>
+</ul>
+</li>
+<li><code>Stream.toList</code> : afin d’éviter de passer
+parun <code>.collect()</code> <a href="https://www.oracle.com/java/technologies/javase/16all-relnotes.html#NewFeature">@since Java 16</a><ul>
+<li>Descriptif</li>
+</ul>
+</li>
+</ul>
+<h1 id="les-fiches">Les fiches</h1>
+<table>
+<thead>
+<tr>
+<th align="center">.pdf</th>
+<th>.html</th>
+<th align="center">.md</th>
+<th align="center">.png</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">/</td>
+<td><a href="/java/java11_17_fiche">html</a></td>
+<td align="center">/</td>
+<td align="center">/</td>
+</tr>
+</tbody></table>
+</div>
+      </article>
+
+      <footer class="site-footer">
+
+        
+
+        
+        <div class="footer-fine-print"><p>Ce site est en cours de construction. Il est susceptible de changer, de déménager, de disparaître, ou autre, du jour au lendemain, sans préavis ni garantie<p><p><strong>NOTE:</strong>l'icône du livre est sous licence <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank">Creative Commons (Attribution 3.0 Unported)</a>, et a été créé par <a href="https://www.iconfinder.com/laurareen">Laura Reen</a>.</p></div>
+        
+
+        
+        <div class="footer-links">
+          
+          <div><a href="https://github.com/nathvh/nathvh.github.io" target="_blank" rel="noopener">Github</a></div>
+          
+        </div>
+        
+
+      </footer>
+    </div>
+
+  </div>
+</div>
+
+<script src="/template-files/js/main.js"></script>
+
+
+</body>
+
+</html>
