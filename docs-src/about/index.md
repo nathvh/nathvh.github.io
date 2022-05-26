@@ -3,14 +3,16 @@ title: About
 toc: false
 ---
 
-# Moi
+# Auteurs
 
-Je m'appelle Nathaniel et je suis dev spécialisé [Java](https://fr.wikipedia.org/wiki/Java_(langage)) qui veut partager
-ses connaissances.
+## Nathaniel
 
-Je serais surtout le premier utilisateur de ce site !
-En effet, j'en ai assez de faire des recherches pour retrouver comment, par exemple, on insère une image dans Markdown
-par exemple.
+Créateur du site, je suis dev spécialisé [Java](https://fr.wikipedia.org/wiki/Java_(langage)) qui veut partager
+depuis longtemps ses connaissances. J'ai enfin trouvé une idée qui me plait ! Et j'espère qu'elle te plaira aussi.
+
+Je serais aussi le premier utilisateur de ce site !  
+En effet, j'en ai assez de faire des recherches pour retrouver comment, par exemple, on insère une image
+dans [Markdown](https://fr.wikipedia.org/wiki/Markdown).
 
 # Site
 
