@@ -47,7 +47,7 @@
 
     
     <div class="nav-screen"></div>
-    <nav class="nav-list"><ul><li><a href="/root">Root</a></li><li><a href="/java">Java</a><ul><li><a href="/java/java11_17" class="current-page">Changement entre Java 11 et Java 17 (v1.2022.05.25)</a></li><li><a href="/java/java11_17_fiche">Changement entre Java 11 et Java 17 (v1.2022.05.25)</a></li></ul></li><li><a href="/about">About</a><ul></ul></li></ul></li></nav>
+    <nav class="nav-list"><ul><li><a href="/root">Root</a></li><li><a href="/java">Java</a><ul><li><a href="/java/java11_17" class="current-page">Changement entre Java 11 et Java 17 (v1.2022.05.25)</a></li></ul></li><li><a href="/about">About</a><ul></ul></li></ul></li></nav>
     
 
     <div class="page-content-main">
@@ -60,7 +60,7 @@
         
         <div>
           <p><strong>Page Content</strong></p>
-          <div class="section-nav"><ul class="toc"><li><a href="#switch-case">Switch Case</a></li><li><a href="#class-modifier">Class modifier</a></li><li><a href="#formatage">Formatage</a></li><li><a href="#divers">Divers</a></li><li><a href="#les-fiches">Les fiches</a></li></ul></div>
+          <div class="section-nav"><ul class="toc"><li><a href="#switch-case">Switch Case</a></li><li><a href="#class-modifier">Class modifier</a></li><li><a href="#formatage">Formatage</a></li><li><a href="#divers">Divers</a></li><li><a href="#les-fiches">Les fiches</a></li><li><a href="#les-sources">Les sources</a></li><li><a href="#auteurs">Auteurs</a></li></ul></div>
         </div>
         
 
@@ -70,30 +70,31 @@
 <ul>
 <li><p>case multiple avec un
 séparateur <code>,</code> <a href="https://www.oracle.com/java/technologies/javase/14all-relnotes.html#NewFeature">@since Java 14</a></p>
-<pre><code class="language-java"><span class="hljs-keyword">switch</span> (i) {
-  <span class="hljs-keyword">case</span> <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span> :
-    System.out.println(<span class="hljs-string">"Value is "</span> + i);
-    <span class="hljs-keyword">break</span>;
-  <span class="hljs-function"><span class="hljs-keyword">default</span> throw new <span class="hljs-title">IllegalArgumentException</span><span class="hljs-params">(<span class="hljs-string">"Number is to big"</span>)</span></span>;
+<pre><code class="language-java">  <span class="hljs-keyword">switch</span> (i) {
+    <span class="hljs-keyword">case</span> <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span> :
+      System.out.println(<span class="hljs-string">"Value is "</span> + i);
+      <span class="hljs-keyword">break</span>;
+    <span class="hljs-keyword">default</span> :
+      <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> IllegalArgumentException(<span class="hljs-string">"Number is not supported"</span>);
 }</code></pre>
 </li>
 <li><p><code>-&gt;</code> remplace <code>:</code> et évite
 le <code>break</code> <a href="https://www.oracle.com/java/technologies/javase/12all-relnotes.html#NewFeature">@since Java 12</a></p>
 <pre><code class="language-java"><span class="hljs-keyword">switch</span> (i) {
   <span class="hljs-keyword">case</span> <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span> -&gt; System.out.println(<span class="hljs-string">"Value is "</span> + i);
-  <span class="hljs-function"><span class="hljs-keyword">default</span> throw new <span class="hljs-title">IllegalArgumentException</span><span class="hljs-params">(<span class="hljs-string">"Number is to big"</span>)</span></span>;
+  <span class="hljs-keyword">default</span>      -&gt; <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> IllegalArgumentException(<span class="hljs-string">"Number is not supported"</span>);
 }</code></pre>
 </li>
 <li><p><code>-&gt;</code> peut être utilisé pour renvoyer une
 valeur <a href="https://www.oracle.com/java/technologies/javase/14all-relnotes.html#NewFeature">@since Java 14</a></p>
 <pre><code class="language-java">String vehicleType = <span class="hljs-keyword">switch</span> (wheelNumber) {
-  <span class="hljs-keyword">case</span> <span class="hljs-number">2</span> -&gt; <span class="hljs-string">"bicycle"</span>;
-  <span class="hljs-keyword">case</span> <span class="hljs-number">4</span> -&gt; <span class="hljs-string">"car"</span>;
-  <span class="hljs-keyword">default</span> -&gt; <span class="hljs-string">"Unknow vehicle"</span>;
-}</code></pre>
+  <span class="hljs-keyword">case</span> <span class="hljs-number">2</span>  -&gt; <span class="hljs-string">"bicycle"</span>;
+  <span class="hljs-keyword">case</span> <span class="hljs-number">4</span>  -&gt; <span class="hljs-string">"car"</span>;
+  <span class="hljs-keyword">default</span> -&gt; <span class="hljs-string">"Unknown vehicle"</span>;
+};</code></pre>
 </li>
 <li><p><code>-&gt;</code> switch sur le type pour <em>caster</em> à la
-volée <a href="https://www.oracle.com/java/technologies/javase/17all-relnotes.html#NewFeature">@since Java 17</a></p>
+volée <a href="https://www.oracle.com/java/technologies/javase/17all-relnotes.html#NewFeature">@since Java 17 preview</a></p>
 <pre><code class="language-java"><span class="hljs-function"><span class="hljs-keyword">static</span> String <span class="hljs-title">getType</span><span class="hljs-params">(Object o)</span> </span>{
   <span class="hljs-keyword">return</span> <span class="hljs-keyword">switch</span> (o) {
     <span class="hljs-keyword">case</span> Integer i -&gt; String.format(<span class="hljs-string">"%d is an integer"</span>, i);
@@ -101,7 +102,7 @@ volée <a href="https://www.oracle.com/java/technologies/javase/17all-relnotes.h
     <span class="hljs-keyword">case</span> Double d  -&gt; String.format(<span class="hljs-string">"%f is a decimal number!"</span>, d);
     <span class="hljs-keyword">case</span> String s  -&gt; String.format(<span class="hljs-string">"%s is a String!"</span>, s);
     <span class="hljs-keyword">default</span>        -&gt; <span class="hljs-string">"Non reconnu"</span>; 
-  }
+  };
 }</code></pre>
 </li>
 </ul>
@@ -110,62 +111,71 @@ volée <a href="https://www.oracle.com/java/technologies/javase/17all-relnotes.h
 <li><p><code>record</code> : nouveau type de class : immutable et
 génère <code>getter/hashCode/equals</code> <a href="https://www.oracle.com/java/technologies/javase/14all-relnotes.html#NewFeature">@since Java 14</a></p>
 <pre><code class="language-java"><span class="hljs-function">record <span class="hljs-title">ColorRecord</span><span class="hljs-params">(<span class="hljs-keyword">int</span> red, <span class="hljs-keyword">int</span> green, <span class="hljs-keyword">int</span> blue)</span> </span>{};
-ColorRecord color = <span class="hljs-keyword">new</span> ColorRecord(<span class="hljs-number">255</span>, <span class="hljs-number">10</span>, <span class="hljs-number">10</span>);</code></pre>
+ColorRecord color = <span class="hljs-keyword">new</span> ColorRecord(<span class="hljs-number">255</span>, <span class="hljs-number">10</span>, <span class="hljs-number">10</span>);
+color.red();</code></pre>
 </li>
 <li><p><code>sealed</code> : afin de verrouiller les possibilités
 d&#39;héritage <a href="https://www.oracle.com/java/technologies/javase/16all-relnotes.html#NewFeature">@since Java 16</a></p>
 <pre><code class="language-java"><span class="hljs-keyword">abstract</span> sealed <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Person</span> <span class="hljs-title">permits</span> <span class="hljs-title">Employee</span>, <span class="hljs-title">Boss</span> </span>{
- String name;
+  String name;
 }
 <span class="hljs-keyword">final</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Employee</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Person</span> </span>{
- <span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">getEmployeeId</span><span class="hljs-params">()</span> </span>{
+  <span class="hljs-keyword">int</span> id;  
+  <span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">getEmployeeId</span><span class="hljs-params">()</span> </span>{
     <span class="hljs-keyword">return</span> id;
- }
+  }
+}
 <span class="hljs-keyword">final</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Boss</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Person</span> </span>{ }
 
-<span class="hljs-keyword">final</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Customer</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Person</span> </span>{ } <span class="hljs-comment">// va générer une erreur à la compilation</span></code></pre>
+<span class="hljs-comment">// Va générer une erreur à la compilation</span>
+<span class="hljs-keyword">final</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Customer</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Person</span> </span>{ } </code></pre>
 </li>
 </ul>
 <h1 id="formatage">Formatage</h1>
 <ul>
 <li><code>NumberFormat</code> : ajout d&#39;un formatage <code>SHORT</code> : 10k, 1M,
-etc. <a href="https://www.oracle.com/java/technologies/javase/12all-relnotes.html#NewFeature">@since Java 12</a><pre><code class="language-java">NumberFormat.getCompactNumberInstance(Locale.FR, NumberFormat.Style.SHORT);</code></pre>
+etc. <a href="https://www.oracle.com/java/technologies/javase/12all-relnotes.html#NewFeature">@since Java 12</a><pre><code class="language-java">NumberFormat.getCompactNumberInstance(Locale.FRANCE, NumberFormat.Style.SHORT);</code></pre>
 </li>
-<li><code>NumberFormat</code> : ajout d&#39;un formatage <code>LONG</code>; avec <code>Locale</code> : A million, 2 mille,
-etc. <a href="https://www.oracle.com/java/technologies/javase/14all-relnotes.html#NewFeature">@since Java 14</a><pre><code class="language-java">NumberFormat.getCompactNumberInstance(Locale.FR, NumberFormat.Style.LONG);</code></pre>
+<li><code>NumberFormat</code> : ajout d&#39;un formatage <code>LONG</code>; avec <code>Locale</code> : 1 million, 2 mille,
+etc. <a href="https://www.oracle.com/java/technologies/javase/14all-relnotes.html#NewFeature">@since Java 14</a><pre><code class="language-java">NumberFormat.getCompactNumberInstance(Locale.FRANCE, NumberFormat.Style.LONG);</code></pre>
 </li>
 <li><code>NumberFormat</code> : ajout d’un formatage monnaie, avec <code>Locale</code> : $3.24, 5,61€,
-etc. <a href="https://www.oracle.com/java/technologies/javase/14all-relnotes.html#NewFeature">@since Java 14</a><ul>
-<li>Descriptif</li>
-</ul>
+etc. <a href="https://www.oracle.com/java/technologies/javase/14all-relnotes.html#NewFeature">@since Java 14</a><pre><code class="language-java">NumberFormat.getCurrencyInstance(Locale.FRANCE)</code></pre>
 </li>
-<li><code>DateTimeFormatter</code> : ajout du cycle, avec <code>Locale</code> : Matin, Après-midi,
-etc. <a href="https://www.oracle.com/java/technologies/javase/16all-relnotes.html#NewFeature">@since Java 16</a><ul>
-<li>Descriptif</li>
-</ul>
+<li><code>DateTimeFormatter</code> : ajout du cycle, avec <code>Locale</code> : du matin, de l&#39;après-midi,
+etc. <a href="https://www.oracle.com/java/technologies/javase/16all-relnotes.html#NewFeature">@since Java 16</a><pre><code class="language-java">DateTimeFormatter.ofPattern(<span class="hljs-string">"B"</span>, Locale.FRANCE)</code></pre>
 </li>
 </ul>
 <h1 id="divers">Divers</h1>
 <ul>
 <li><code>String</code> : bloc String multiligne
-avec <code>&quot;&quot;&quot;</code> <a href="https://www.oracle.com/java/technologies/javase/13all-relnotes.html#NewFeature">@since Java 13</a><ul>
-<li>Descriptif</li>
-</ul>
+avec <code>&quot;&quot;&quot;</code> <a href="https://www.oracle.com/java/technologies/javase/13all-relnotes.html#NewFeature">@since Java 13</a><pre><code class="language-java">// pour le même rendu :
+String withoutMultiline = &quot;{\n&quot; +
+    &quot;  \&quot;id\&quot;:213,\n&quot; +
+    &quot;  \&quot;name\&quot;:\&quot;Nathaniel\&quot;\n&quot; +
+    &quot;}&quot;;
+String withMultiline = &quot;&quot;&quot;
+    {
+      &quot;id&quot;:213,
+      &quot;name&quot;:&quot;Nathaniel&quot;
+    }&quot;&quot;&quot;;</code></pre>
 </li>
 <li><code>Exception</code> : meilleur message de debug sur les <code>Exception</code>, en particulier
-les <code>NullpointerException</code> <a href="https://www.oracle.com/java/technologies/javase/17all-relnotes.html#NewFeature">@since Java 17</a><ul>
-<li>Descriptif</li>
-</ul>
+les <code>NullpointerException</code> <a href="https://www.oracle.com/java/technologies/javase/17all-relnotes.html#NewFeature">@since Java 17</a><pre><code class="language-java">String s = <span class="hljs-keyword">null</span>;
+System.out.println(s.toLowerCase());
+<span class="hljs-comment">// =&gt; Exception in thread "main" java.lang.NullPointerException: Cannot invoke "String.toLowerCase()" because "s" is null</span></code></pre>
 </li>
 <li><code>instanceof</code> : peut être suivi d&#39;un nom de variable afin de caster
-immédiatement <a href="https://www.oracle.com/java/technologies/javase/16all-relnotes.html#NewFeature">@since Java 16</a><ul>
-<li>Descriptif</li>
-</ul>
+immédiatement <a href="https://www.oracle.com/java/technologies/javase/16all-relnotes.html#NewFeature">@since Java 16</a><pre><code class="language-java">Person p = <span class="hljs-keyword">new</span> Employee();
+<span class="hljs-keyword">if</span> (p <span class="hljs-keyword">instanceof</span> Employee employee){
+    System.out.println(employee.getEmployeeId());
+}</code></pre>
 </li>
 <li><code>Stream.toList</code> : afin d’éviter de passer
-par un <code>.collect()</code> <a href="https://www.oracle.com/java/technologies/javase/16all-relnotes.html#NewFeature">@since Java 16</a><ul>
-<li>Descriptif</li>
-</ul>
+par un <code>.collect(Collectors.toList())</code> <a href="https://www.oracle.com/java/technologies/javase/16all-relnotes.html#NewFeature">@since Java 16</a><pre><code class="language-java"><span class="hljs-comment">// avant</span>
+List.of(<span class="hljs-string">"some"</span>,<span class="hljs-string">"thing"</span>).stream().collect(Collectors.toList());
+<span class="hljs-comment">// maintenant</span>
+List.of(<span class="hljs-string">"some"</span>,<span class="hljs-string">"thing"</span>).stream().toList();</code></pre>
 </li>
 </ul>
 <h1 id="les-fiches">Les fiches</h1>
@@ -180,11 +190,16 @@ par un <code>.collect()</code> <a href="https://www.oracle.com/java/technologies
 </thead>
 <tbody><tr>
 <td align="center">/</td>
-<td><a href="/java/java11_17_fiche">html</a></td>
-<td align="center">/</td>
+<td><a href="/java/java11_17_card">html</a></td>
+<td align="center"><a href="/java/java11_17_card.markdown">md</a></td>
 <td align="center">/</td>
 </tr>
 </tbody></table>
+<h1 id="les-sources">Les sources</h1>
+<p>Comme indiqué au fur et à mesure, les <a href="https://www.oracle.com/java/technologies/java-se-glance.html">Release Notes</a> des
+différentes versions de Java.</p>
+<h1 id="auteurs">Auteurs</h1>
+<p><a href="/about#Nathaniel">Nathaniel</a></p>
 </div>
       </article>
 

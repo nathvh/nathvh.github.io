@@ -7,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Dev Pratique | Java</title>
+  <title>Dev Pratique | Changement entre Java 11 et Java 17 (v1.2022.05.25)</title>
   
 
   <link rel="icon" href="/images/book-48.png">
@@ -47,20 +47,49 @@
 
     
     <div class="nav-screen"></div>
-    <nav class="nav-list"><ul><li><a href="/root">Root</a></li><li><a href="/java" class="current-page">Java</a><ul><li><a href="/java/java11_17">Changement entre Java 11 et Java 17 (v1.2022.05.25)</a></li></ul></li><li><a href="/about">About</a><ul></ul></li></ul></li></nav>
+    <nav class="nav-list"><ul><li><a href="/root">Root</a></li><li><a href="/java">Java</a><ul><li><a href="/java/java11_17">Changement entre Java 11 et Java 17 (v1.2022.05.25)</a></li></ul></li><li><a href="/about">About</a><ul></ul></li></ul></li></nav>
     
 
     <div class="page-content-main">
       <article class="post">
         <header class="post-header">
           
-          <h1 class="post-title">Java</h1>
+          <h1 class="post-title">Changement entre Java 11 et Java 17 (v1.2022.05.25)</h1>
         </header>
 
         
+        <div>
+          <p><strong>Page Content</strong></p>
+          <div class="section-nav"><ul class="toc"><li><a href="#switch-case">Switch Case</a></li><li><a href="#classe">Classe</a></li><li><a href="#formatage">Formatage</a></li><li><a href="#divers">Divers</a></li></ul></div>
+        </div>
+        
 
-        <div class="post-content"><p>Non, je ne présenterai pas Java, mais si tu veux en savoir
-plus, <a href="https://fr.wikipedia.org/wiki/Java_(langage)">wikipedia</a> se fera un plaisir de te renseigner !</p>
+        <div class="post-content"><h1 id="switch-case">Switch Case</h1>
+<ul>
+<li>case multiple avec un séparateur <code>,</code></li>
+<li><code>-&gt;</code> remplace <code>:</code> et évite le <code>break</code></li>
+<li><code>-&gt;</code> peut être utilisé pour renvoyer une valeur</li>
+<li><code>-&gt;</code> switch sur le type pour <em>caster</em> à la volée</li>
+</ul>
+<h1 id="classe">Classe</h1>
+<ul>
+<li><code>record</code> : nouveau type de class : immutable et génère <code>getter/hashCode/equals</code></li>
+<li><code>sealed</code> : afin de verrouiller les possibilités d&#39;héritage</li>
+</ul>
+<h1 id="formatage">Formatage</h1>
+<ul>
+<li><code>NumberFormat</code> : ajout d&#39;un formatage <code>SHORT</code> : 10k, 1M, etc.</li>
+<li><code>NumberFormat</code> : ajout d&#39;un formatage <code>LONG</code>; avec <code>Locale</code> : 1 million, 2 mille, etc.</li>
+<li><code>NumberFormat</code> : ajout d’un formatage monnaie, avec <code>Locale</code> : $3.24, 5,61€, etc.</li>
+<li><code>DateTimeFormatter</code> : ajout du cycle, avec <code>Locale</code> : du matin, de l&#39;près-midi, etc.</li>
+</ul>
+<h1 id="divers">Divers</h1>
+<ul>
+<li><code>String</code> : bloc String multiligne avec <code>&quot;&quot;&quot;</code></li>
+<li><code>Exception</code> : meilleur message de debug sur les <code>Exception</code>, en particulier les <code>NullpointerException</code></li>
+<li><code>instanceof</code> : peut être suivi d&#39;un nom de variable afin de caster immédiatement</li>
+<li><code>Stream.toList</code> : afin d’éviter de passer par un <code>.collect()</code></li>
+</ul>
 </div>
       </article>
 
