@@ -3,13 +3,17 @@
   "version": "0.0.1",
   "description": "Le site des fiches pratiques pour faciliter la vie des Dévs",
   "scripts": {
+    "docs:copy": "cd docs-src & copyfiles -V **/*_fiche.md ../docs/ & cd..",
     "docs:build": "markdown-docs build docs-src docs",
     "docs:dev": "markdown-docs dev docs-src",
     "docs:bd": " markdown-docs dev --destination docs docs-src",
-    "docs:example": "markdown-docs dev example"
+    "docs:example": "markdown-docs dev example",
+    "docs:rename": "renamer --dry-run -f \"*_fiche.md$\" -r \"*_fiche.markdown$\" \"docs-src/**\""
   },
   "devDependencies": {
-    "@gi60s/markdown-docs": "^0.1.2"
+    "@gi60s/markdown-docs": "^0.1.2",
+    "copyfiles": "^2.4.1",
+    "renamer": "^4.0.0"
   },
   "dependencies": {
     "markdown-pdf": "^10.0.0"
