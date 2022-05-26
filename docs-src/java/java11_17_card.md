@@ -1,5 +1,5 @@
 ---
-title: Changement entre Java 11 et Java 17 (v1.2022.05.25)
+title: Changement entre Java 11 et Java 17 (v1.2022.05.26)
 navMenu: false
 ---
 
@@ -27,5 +27,8 @@ navMenu: false
 - `String` : bloc String multiligne avec `"""`
 - `Exception` : meilleur message de debug sur les `Exception`, en particulier les `NullpointerException`
 - `instanceof` : peut être suivi d'un nom de variable afin de caster immédiatement
-- `Stream.toList` : afin d’éviter de passer par un `.collect()`
+- `Stream.toList` : afin d’éviter de passer par un `.collect(Collectors.toList())`
+
+---
+Cette carte a été publiée en premier sur https://nathvh.github.io/
 

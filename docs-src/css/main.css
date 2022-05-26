@@ -1,3 +1,6 @@
+.post-title{
+  border-bottom: 1px solid #e8e8e8;
+}
 
 .site-title {
   background-image: url('../images/book-48.png');
@@ -5,6 +8,29 @@
   background-position: left center;
   padding-left: 55px;
 }
-.post-title{
-    --font-weight: bold;
+
+
+
+a:not([href^="/"]):not([href^="#"]) {
+  text-decoration: underline
+}
+
+.page-content .wrapper article h1 {
+  font-size: 28px;
+}
+.page-content .wrapper article h2 {
+  border-bottom: none;
+  font-size: 26px;
+}
+.page-content .wrapper article h3 {
+  font-size: 24px;
+}
+.page-content .wrapper article h4 {
+  font-size: 22px;
+}
+.page-content .wrapper article h5 {
+  font-size: 20px;
+}
+.page-content .wrapper article h6 {
+  font-size: 18px;
 }

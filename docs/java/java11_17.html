@@ -7,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Dev Pratique | Changement entre Java 11 et Java 17 (v1.2022.05.25)</title>
+  <title>Dev Pratique | Changement entre Java 11 et Java 17 (v1.2022.05.26)</title>
   
 
   <link rel="icon" href="/images/book-48.png">
@@ -47,20 +47,20 @@
 
     
     <div class="nav-screen"></div>
-    <nav class="nav-list"><ul><li><a href="/root">Root</a></li><li><a href="/java">Java</a><ul><li><a href="/java/java11_17" class="current-page">Changement entre Java 11 et Java 17 (v1.2022.05.25)</a></li></ul></li><li><a href="/about">About</a><ul></ul></li></ul></li></nav>
+    <nav class="nav-list"><ul><li><a href="/root">Root</a></li><li><a href="/java">Java</a><ul><li><a href="/java/java11_17" class="current-page">Changement entre Java 11 et Java 17 (v1.2022.05.26)</a></li></ul></li><li><a href="/about">About</a><ul></ul></li></ul></li></nav>
     
 
     <div class="page-content-main">
       <article class="post">
         <header class="post-header">
           
-          <h1 class="post-title">Changement entre Java 11 et Java 17 (v1.2022.05.25)</h1>
+          <h1 class="post-title">Changement entre Java 11 et Java 17 (v1.2022.05.26)</h1>
         </header>
 
         
         <div>
           <p><strong>Page Content</strong></p>
-          <div class="section-nav"><ul class="toc"><li><a href="#switch-case">Switch Case</a></li><li><a href="#class-modifier">Class modifier</a></li><li><a href="#formatage">Formatage</a></li><li><a href="#divers">Divers</a></li><li><a href="#les-fiches">Les fiches</a></li><li><a href="#les-sources">Les sources</a></li><li><a href="#auteurs">Auteurs</a></li></ul></div>
+          <div class="section-nav"><ul class="toc"><li><a href="#switch-case">Switch Case</a></li><li><a href="#class-modifier">Class modifier</a></li><li><a href="#formatage">Formatage</a></li><li><a href="#divers">Divers</a></li><li><a href="#les-fiches">Les fiches</a></li><li><a href="#informations">Informations</a></li></ul></div>
         </div>
         
 
@@ -171,8 +171,8 @@ immédiatement <a href="https://www.oracle.com/java/technologies/javase/16all-re
     System.out.println(employee.getEmployeeId());
 }</code></pre>
 </li>
-<li><code>Stream.toList</code> : afin d’éviter de passer
-par un <code>.collect(Collectors.toList())</code> <a href="https://www.oracle.com/java/technologies/javase/16all-relnotes.html#NewFeature">@since Java 16</a><pre><code class="language-java"><span class="hljs-comment">// avant</span>
+<li><code>Stream.toList</code> : afin d’éviter de passer par
+un <code>.collect(Collectors.toList())</code> <a href="https://www.oracle.com/java/technologies/javase/16all-relnotes.html#NewFeature">@since Java 16</a><pre><code class="language-java"><span class="hljs-comment">// avant</span>
 List.of(<span class="hljs-string">"some"</span>,<span class="hljs-string">"thing"</span>).stream().collect(Collectors.toList());
 <span class="hljs-comment">// maintenant</span>
 List.of(<span class="hljs-string">"some"</span>,<span class="hljs-string">"thing"</span>).stream().toList();</code></pre>
@@ -195,11 +195,44 @@ List.of(<span class="hljs-string">"some"</span>,<span class="hljs-string">"thing
 <td align="center">/</td>
 </tr>
 </tbody></table>
-<h1 id="les-sources">Les sources</h1>
+<h1 id="informations">Informations</h1>
+<h2 id="pourquoi-">Pourquoi ?</h2>
+<p>Les chiffres changent, mais les faits restent.
+En 2022, à la publication de cette fiche, <a href="https://fr.wikipedia.org/wiki/New_Relic">New Relic</a> publiait
+un <a href="https://newrelic.com/fr/resources/report/2022-state-of-java-ecosystem#toc-java-11-est-la-nouvelle-norme">rapport</a>
+sur
+l&#39;usage de Java :</p>
+<table>
+<thead>
+<tr>
+<th align="center"></th>
+<th align="center">Java 8</th>
+<th align="center">Java 11</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">2020</td>
+<td align="center">84,48 %</td>
+<td align="center">11,11%</td>
+</tr>
+<tr>
+<td align="center">2022</td>
+<td align="center">46,45 %</td>
+<td align="center">48%</td>
+</tr>
+</tbody></table>
+<p><a href="https://fr.wikipedia.org/wiki/Java_(langage)#Java_SE_17">Java 17</a> étant la nouvelle
+version <a href="https://fr.wikipedia.org/wiki/Long-term_support">LTS</a> de Java, il y a fort à parier que les migrations seront
+nombreuses.
+De plus, les versions 12 à 16 sont assez peu utilisées. J&#39;ai décidé de faire le grand écart, comme beaucoup et de
+passer de la 11 à la 17. Oui, cette fiche servira donc au moins à une personne !</p>
+<h2 id="sources">Sources</h2>
 <p>Comme indiqué au fur et à mesure, les <a href="https://www.oracle.com/java/technologies/java-se-glance.html">Release Notes</a> des
 différentes versions de Java.</p>
-<h1 id="auteurs">Auteurs</h1>
-<p><a href="/about#Nathaniel">Nathaniel</a></p>
+<h2 id="auteurs">Auteurs</h2>
+<p><a href="/about#nathaniel">Nathaniel</a></p>
+<hr>
+<p>Cette carte a été publiée en premier sur <a href="https://nathvh.github.io/">https://nathvh.github.io/</a></p>
 </div>
       </article>
 
@@ -208,7 +241,7 @@ différentes versions de Java.</p>
         
 
         
-        <div class="footer-fine-print"><p>Ce site est en cours de construction. Il est susceptible de changer, de déménager, de disparaître, ou autre, du jour au lendemain, sans préavis ni garantie<p><p><strong>NOTE:</strong>l'icône du livre est sous licence <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank">Creative Commons (Attribution 3.0 Unported)</a>, et a été créé par <a href="https://www.iconfinder.com/laurareen">Laura Reen</a>.</p></div>
+        <div class="footer-fine-print"><p>Ce site est en cours de construction. Il est susceptible de changer, de déménager, de disparaître, ou autre, du jour au lendemain, sans préavis.<p><p><strong>NOTE : </strong>l'icône du livre est sous licence <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank">Creative Commons (Attribution 3.0 Unported)</a>, et a été créé par <a href="https://www.iconfinder.com/laurareen">Laura Reen</a>.</p></div>
         
 
         
