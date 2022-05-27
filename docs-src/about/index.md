@@ -8,14 +8,14 @@ toc: 2
 ## Nathaniel
 
 Créateur du site, je suis un dév spécialisé [Java](https://fr.wikipedia.org/wiki/Java_(langage)) qui veut partager
-ses connaissances depuis longtemps. J'ai enfin trouvé une idée qui me plait ! Et j'espère qu'elle te plaira aussi.
+ses connaissances depuis longtemps. J'ai enfin trouvé une idée qui me plait&nbsp;! Et j'espère qu'elle te plaira aussi.
 
-Je serais aussi le premier utilisateur de ce site !  
+Je serais aussi le premier utilisateur de ce site&nbsp;!  
 En effet, j'en ai assez de faire des recherches pour retrouver un mot clef ou une comment faire, par exemple, on insère
 une image
 dans [Markdown](https://fr.wikipedia.org/wiki/Markdown).
 
-# Pourquoi un énième site technique pour les dévs ?
+# Pourquoi un énième site technique pour les dévs&nbsp;?
 
 ## Formats courts
 
@@ -38,7 +38,7 @@ et sera disponible en :
 - [PNG](https://fr.wikipedia.org/wiki/Portable_Network_Graphics)
 - et bien sûr [Markdown](https://fr.wikipedia.org/wiki/Markdown)
 
-## Utilité ?
+## Utilité&nbsp;?
 
 Je vais te citer ici plusieurs cas d'usage : 
 - support de travail pour ne pas à toujours faire des recherches
@@ -57,20 +57,20 @@ concepts, mais aussi des liens plus techniques ou pratiques.
 Afin de couvrir un maximum de sujet sur la vie des développeurs, d'autres personnes seront invités sur ce site. Mais
 ceci est une autre histoire.
 
-## Les sujets traités ?
+## Les sujets traités&nbsp;?
 
 N'importe quel sujet pourra être traité.  
 Les premiers seront sur [Java 17](https://fr.wikipedia.org/wiki/Java_(langage)#Java_SE_17),
 le [Markdown](https://fr.wikipedia.org/wiki/Markdown),
 les [Regex](https://fr.wikipedia.org/wiki/Expression_r%C3%A9guli%C3%A8re) (!).
 Si tu as des idées, n'hésite à passer sur mon [github](https://github.com/nathvh/nathvh.github.io/issues) afin de poster
-une issue ou même pourquoi une PR !
+une issue ou même pourquoi une PR&nbsp;!
 
-# Et c'est tout ?
+# Et c'est tout&nbsp;?
 
 Non, tu as aussi à disposition [ici](../dev-pratique-rss.xml) un [flux RSS](https://fr.wikipedia.org/wiki/RSS) afin de te
 tenir au courant sans avoir à passer tous
-les jours !
+les jours&nbsp;!
 
 Et je ferais en sorte de te donner un max de liens si tu veux plus d'informations.
 # Les technos utilisées

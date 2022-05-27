@@ -31,4 +31,3 @@ navMenu: false
 
 ---
 Cette carte a été publiée en premier sur https://nathvh.github.io/
-
