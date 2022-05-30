@@ -1,0 +1,261 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Dev Pratique | Markdown (v1.2022.05.30)</title>
+  
+
+  <link rel="icon" href="/images/book-48.png">
+
+  <link rel="stylesheet" href="/template-files/styles/main.css" media="all">
+  
+  
+  <link rel="stylesheet" href="/css/main.css" media="all">
+  
+  
+  
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="wrapper">
+      <a class="site-title" href="">
+        Dev Pratique
+      </a>
+
+      
+      <nav class="site-nav">
+        <a href="#" class="menu-icon" aria-label="Menu">
+          <svg viewBox="0 0 18 15">
+            <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+            <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+            <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+          </svg>
+        </a>
+      </nav>
+      
+    </div>
+  </header>
+
+<div class="page-content">
+  <div class="wrapper">
+
+    
+    <div class="nav-screen"></div>
+    <nav class="nav-list"><ul><li><a href="/root">Root</a></li><li><a href="/java">Java</a><ul><li><a href="/java/java11_17">Changement entre Java 11 et Java 17 (v1.2022.05.26)</a></li></ul></li><li><a href="/misc">Divers</a><ul><li><a href="/misc/markdown">Markdown (v1.2022.05.30)</a></li></ul></li><li><a href="/about">About</a><ul></ul></li></ul></li></nav>
+    
+
+    <div class="page-content-main">
+      <article class="post">
+        <header class="post-header">
+          
+          <h1 class="post-title">Markdown (v1.2022.05.30)</h1>
+        </header>
+
+        
+        <div>
+          <p><strong>Page Content</strong></p>
+          <div class="section-nav"><ul class="toc"><li><a href="#les-bases">Les bases</a></li><li><a href="#les-complments">Les compléments</a><ul><li><a href="#auteurs">Auteurs</a></li></ul></li></ul></div>
+        </div>
+        
+
+        <div class="post-content"><h1 id="les-bases">Les bases</h1>
+<table>
+<thead>
+<tr>
+<th align="left">Nom &amp; Rendu</th>
+<th align="left">Markdown</th>
+<th align="left">HTML</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><h1>Titre 1</h1></td>
+<td align="left"># Titre 1</td>
+<td align="left">&lt;h1&gt;Titre 1&lt;/h1&gt;</td>
+</tr>
+<tr>
+<td align="left"><h2>Titre 2</h2></td>
+<td align="left">## Titre 2</td>
+<td align="left">&lt;h2&gt;Titre 2&lt;/h2&gt;</td>
+</tr>
+<tr>
+<td align="left"><h3>Titre 3</h3></td>
+<td align="left">### Titre 3</td>
+<td align="left">&lt;h3&gt;Titre 3&lt;/h3&gt;</td>
+</tr>
+<tr>
+<td align="left"><h4>Titre 4</h4></td>
+<td align="left">#### Titre 4</td>
+<td align="left">&lt;h4&gt;Titre 4&lt;/h4&gt;</td>
+</tr>
+<tr>
+<td align="left"><h5>Titre 5</h5></td>
+<td align="left">##### Titre 5</td>
+<td align="left">&lt;h5&gt;Titre 5&lt;/h5&gt;</td>
+</tr>
+<tr>
+<td align="left"><h6>Titre 6</h6></td>
+<td align="left">###### Titre 6</td>
+<td align="left">&lt;h6&gt;Titre 6&lt;/h6&gt;</td>
+</tr>
+<tr>
+<td align="left"><strong>Gras</strong></td>
+<td align="left">**Gras**</td>
+<td align="left">&lt;strong&gt;Gras&lt;/strong&gt;</td>
+</tr>
+<tr>
+<td align="left"><em>Italique</em></td>
+<td align="left">*Italique*</td>
+<td align="left">&lt;em&gt;Italique&lt;/em&gt;</td>
+</tr>
+<tr>
+<td align="left"><blockquote>Citation</blockquote></td>
+<td align="left">&gt; Citation</td>
+<td align="left">&lt;blockquote&gt;Citation&lt;/blockquote&gt;</td>
+</tr>
+<tr>
+<td align="left"><ol><li>Liste</li><li>ordonnée</li><ol></td>
+<td align="left">1. Liste <br> 2.ordonnée</td>
+<td align="left">&lt;ol&gt;<br>&lt;li&gt;Liste&lt;/li&gt;<br>&lt;li&gt;ordonnée&lt;/li&gt;<br>&lt;ol&gt;</td>
+</tr>
+<tr>
+<td align="left"><ul><li>Liste</li><li>non ordonnée</li><ul></td>
+<td align="left">- Liste <br> - non ordonnée</td>
+<td align="left">&lt;ul&gt;<br>&lt;li&gt;Liste&lt;/li&gt;<br>&lt;li&gt;non ordonnée&lt;/li&gt;<br>&lt;ul&gt;</td>
+</tr>
+<tr>
+<td align="left"><code>Code</code></td>
+<td align="left">`Code`</td>
+<td align="left">&lt;code&gt;Code&lt;/code&gt;</td>
+</tr>
+<tr>
+<td align="left"><hr></td>
+<td align="left">---</td>
+<td align="left">&lt;hr&gt;</td>
+</tr>
+<tr>
+<td align="left"><a href="www.site.fr">lien</a></td>
+<td align="left">[lien](<a href="http://www.site.fr">www.site.fr</a>)</td>
+<td align="left">&lt;a href=&quot;<a href="http://www.site.fr&quot;&gt;lien%5C">www.site.fr&quot;&gt;lien\</a></a></td>
+</tr>
+<tr>
+<td align="left"><img src="/misc/unknown.png" alt="image"></td>
+<td align="left">![image](/misc/unknown.png)</td>
+<td align="left">&lt;img src=&quot;unknown.png&quot; alt=&quot;image&quot;&gt;</td>
+</tr>
+</tbody></table>
+<h1 id="les-compléments">Les compléments</h1>
+<table>
+<thead>
+<tr>
+<th align="left">Nom &amp; Rendu</th>
+<th align="left">Markdown</th>
+<th align="left">HTML</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><table><tr><td>Tableau C1</td><td>Tableau C2</td><tr></table></td>
+<td align="left">&vert;Tableau&nbsp;C1&vert;Tableau&nbsp;C2&vert;</td>
+<td align="left">&lt;table&gt;&lt;tr&gt;<br>&lt;td&gt;Tableau C1&lt;/td&gt;<br>&lt;td&gt;Tableau C2&lt;/td&gt;<br>&lt;tr&gt;&lt;/table&gt;</td>
+</tr>
+<tr>
+<td align="left"><table><thead><tr><th>Entête&nbsp;tableau</th><tr></thead></table></td>
+<td align="left">&vert; --- &vert; --- &vert;</td>
+<td align="left">&lt;table&gt;&lt;thead&gt;<br>&lt;tr&gt;&lt;th&gt;Entête&nbsp;tableau&lt;/th&gt;&lt;tr&gt;<br>&lt;/thead&gt;&lt;/table&gt;</td>
+</tr>
+<tr>
+<td align="left"><code>Code<br>multiligne</code></td>
+<td align="left">```<br>Code<br>multiligne<br>```</td>
+<td align="left">&lt;code&gt;Code&lt;br&gt;multiligne&lt;/code&gt;</td>
+</tr>
+<tr>
+<td align="left">Note de fin de page</td>
+<td align="left">[^1] &amp; [^1]: /misc/descriptif</td>
+<td align="left"><em>pas d&#39;équivalent</em></td>
+</tr>
+<tr>
+<td align="left"><h3 id="perso">Un super titre<h3></td>
+<td align="left">### Un super titre {#id_perso}</td>
+<td align="left">&lt;h3 id=&quot;perso&quot;&gt;Un super titre&lt;h3&gt;</td>
+</tr>
+<tr>
+<td align="left"><dl><dt>Mot</dt><dd>Définition.</dd></dl></td>
+<td align="left">Mot<br>: Définition</td>
+<td align="left">&lt;dl&gt;<br>&lt;dt&gt;Mot&lt;/dt&gt;<br>&lt;dd&gt;Définition&lt;/dd&gt;<br>&lt;/dl&gt;</td>
+</tr>
+<tr>
+<td align="left"><del>Barré<del></td>
+<td align="left"><del>Barré</del></td>
+<td align="left">&lt;del&gt;Barré&lt;del&gt;</td>
+</tr>
+<tr>
+<td align="left"><input type="checkbox" checked> Case cochée</input></td>
+<td align="left">- [X] Case cochée</td>
+<td align="left">&lt;input type=&quot;checkbox&quot; checked&gt; Case cochée&lt;/input&gt;</td>
+</tr>
+<tr>
+<td align="left"><input type="checkbox"> Case décochée</input></td>
+<td align="left">- [ ] Case décochée</td>
+<td align="left">&lt;input type=&quot;checkbox&quot;&gt; Case décochée&lt;/input&gt;</td>
+</tr>
+<tr>
+<td align="left">&#128514;</td>
+<td align="left">:joy:</td>
+<td align="left">&#128514;</td>
+</tr>
+<tr>
+<td align="left"><mark>Surligné</mark></td>
+<td align="left">==Surligné==</td>
+<td align="left">&lt;mark&gt;Surligné&lt;/mark&gt;</td>
+</tr>
+<tr>
+<td align="left">H<sub>2</sub>O</td>
+<td align="left">H~2~O</td>
+<td align="left">H&lt;sub&gt;2&lt;/sub&gt;O</td>
+</tr>
+<tr>
+<td align="left">X<sup>2</sup></td>
+<td align="left">X^2^</td>
+<td align="left">X&lt;sup&gt;2&lt;/sup&gt;</td>
+</tr>
+</tbody></table>
+<h2 id="auteurs">Auteurs</h2>
+<p><a href="/about#nathaniel">Nathaniel</a></p>
+<hr>
+<p>Cette carte a été publiée en premier sur <a href="https://nathvh.github.io/">https://nathvh.github.io/</a></p>
+</div>
+      </article>
+
+      <footer class="site-footer">
+
+        
+
+        
+        <div class="footer-fine-print"><p>Ce site est en cours de construction. Il est susceptible de changer, de déménager, de disparaître, ou autre, du jour au lendemain, sans préavis.<p><p><strong>NOTE : </strong>l'icône du livre est sous licence <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank">Creative Commons (Attribution 3.0 Unported)</a>, et a été créé par <a href="https://www.iconfinder.com/laurareen">Laura Reen</a>.</p></div>
+        
+
+        
+        <div class="footer-links">
+          
+          <div><a href="https://github.com/nathvh/nathvh.github.io" target="_blank" rel="noopener">Github</a></div>
+          
+        </div>
+        
+
+      </footer>
+    </div>
+
+  </div>
+</div>
+
+<script src="/template-files/js/main.js"></script>
+
+
+</body>
+
+</html>

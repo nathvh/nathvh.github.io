@@ -1,6 +1,6 @@
 ---
 title: Home
-navOrder: root java about
+navOrder: root java misc about
 navMenu: false
 ---
 
