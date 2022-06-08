@@ -40,4 +40,4 @@ Markdown (v2.2022.06.08)
 | X<sup>2</sup>                                                      | X^2^                                                                   | X\<sup>2\</sup>                                                                    |
 
 ---
-Cette fiche a été publiée en premier sur https://nathvh.github.io/ par [Nathaniel](../about#nathaniel)
+*Cette fiche a été publiée en premier sur https://nathvh.github.io/ par [Nathaniel](../about#nathaniel) sous licence [Attribution 4.0 International](https://creativecommons.org/licenses/by/4.0/)* 
