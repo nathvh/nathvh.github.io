@@ -8,7 +8,7 @@ navMenu: false
 - case multiple avec un séparateur `,`
 - `->` remplace `:` et évite le `break`
 - `->` peut être utilisé pour renvoyer une valeur
-- `->` switch sur le type pour _caster_ à la volée
+- `->` switch sur le type pour *caster* à la volée
 
 # Classe
 
