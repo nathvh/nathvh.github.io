@@ -1,5 +1,5 @@
 ---
-title: Markdown (v1.2022.05.30)
+title: Markdown (v2.2022.06.08)
 navMenu: true
 toc: 1
 ---
@@ -35,24 +35,29 @@ d'œil et leur équivalent en [HTML](https://fr.wikipedia.org/wiki/Hypertext_Mar
 # Les compléments
 
 > Ces éléments ont été rajoutés ensuite. <br>
-> Ils **ne** sont **pas** pris en charge par tous les moteurs de rendus et peuvent l'être plus ou bien implémentés.
+> Ils **ne** sont **pas** pris en charge par tous les moteurs de rendus et peuvent être plus ou bien implémentés.
 
+| Nom & Rendu                                                        | Markdown                                                               | HTML                                                                               | 
+|:-------------------------------------------------------------------|:-----------------------------------------------------------------------|:-----------------------------------------------------------------------------------|
+| <table><tr><td>Tableau C1</td><td>Tableau C2</td><tr></table>      | &vert; Tableau&nbsp;C1 &vert; Tableau&nbsp;C2 &vert;                   | \<table>\<tr><br>\<td>Tableau C1\</td><br>\<td>Tableau C2\</td><br>\<tr>\</table>  |
+| <table><thead><tr><th>Entête&nbsp;tableau</th><tr></thead></table> | &vert; Entête&nbsp;tableau &vert;<br>&vert;---------------------&vert; | \<table>\<thead><br>\<tr>\<th>Entête&nbsp;tableau\</th>\<tr><br>\</thead>\</table> |
+| <code>Code<br>multiligne</code>                                    | \```<br>Code<br>multiligne<br>```                                      | \<code>Code\<br>multiligne\</code>                                                 |
+| Note de fin de page                                                | [^1] & [^1]: descriptif                                                | *pas d'équivalent*                                                                 |
+| <h3 id="perso">Un super titre<h3>                                  | ### Un super titre {#perso}                                            | \<h3 id="perso">Un super titre\<h3>                                                |
+| <dl><dt>Mot</dt><dd>Définition.</dd></dl>                          | Mot<br>: Définition                                                    | \<dl><br>\<dt>Mot\</dt><br>\<dd>Définition\</dd><br>\</dl>                         | 
+| <del>Barré<del>                                                    | \~\~Barré~~                                                            | \<del>Barré\<del>                                                                  |
+| <input type="checkbox" checked> Case cochée</input>                | - [X] Case cochée                                                      | \<input type="checkbox" checked> Case cochée\</input>                              |
+| <input type="checkbox"> Case décochée</input>                      | - [ ] Case décochée                                                    | \<input type="checkbox"> Case décochée\</input>                                    |
+| &#128514;                                                          | :joy:                                                                  | &#128514;                                                                          |
+| <mark>Surligné</mark>                                              | \=\=Surligné\=\=                                                       | \<mark>Surligné\</mark>                                                            |
+| H<sub>2</sub>O                                                     | H\~2\~O                                                                | H\<sub>2\</sub>O                                                                   |
+| X<sup>2</sup>                                                      | X^2^                                                                   | X\<sup>2\</sup>                                                                    |
 
-| Nom & Rendu                                                        | Markdown                                         | HTML                                                                               | 
-|:-------------------------------------------------------------------|:-------------------------------------------------|:-----------------------------------------------------------------------------------|
-| <table><tr><td>Tableau C1</td><td>Tableau C2</td><tr></table>      | &vert;Tableau&nbsp;C1&vert;Tableau&nbsp;C2&vert; | \<table>\<tr><br>\<td>Tableau C1\</td><br>\<td>Tableau C2\</td><br>\<tr>\</table>  |
-| <table><thead><tr><th>Entête&nbsp;tableau</th><tr></thead></table> | &vert; --- &vert; --- &vert;                     | \<table>\<thead><br>\<tr>\<th>Entête&nbsp;tableau\</th>\<tr><br>\</thead>\</table> |
-| <code>Code<br>multiligne</code>                                    | \```<br>Code<br>multiligne<br>```                | \<code>Code\<br>multiligne\</code>                                                 |
-| Note de fin de page                                                | [^1] & [^1]: descriptif                          | *pas d'équivalent*                                                                 |
-| <h3 id="perso">Un super titre<h3>                                  | ### Un super titre {#id_perso}                   | \<h3 id="perso">Un super titre\<h3>                                                |
-| <dl><dt>Mot</dt><dd>Définition.</dd></dl>                          | Mot<br>: Définition                              | \<dl><br>\<dt>Mot\</dt><br>\<dd>Définition\</dd><br>\</dl>                         | 
-| <del>Barré<del>                                                    | ~~Barré~~                                        | \<del>Barré\<del>                                                                  |
-| <input type="checkbox" checked> Case cochée</input>                | - [X] Case cochée                                | \<input type="checkbox" checked> Case cochée\</input>                              |
-| <input type="checkbox"> Case décochée</input>                      | - [ ] Case décochée                              | \<input type="checkbox"> Case décochée\</input>                                    |
-| &#128514;                                                          | :joy:                                            | &#128514;                                                                          |
-| <mark>Surligné</mark>                                              | \=\=Surligné\=\=                                 | \<mark>Surligné\</mark>                                                            |
-| H<sub>2</sub>O                                                     | H\~2\~O                                          | H\<sub>2\</sub>O                                                                   |
-| X<sup>2</sup>                                                      | X^2^                                             | X\<sup>2\</sup>                                                                    |
+# Les fiches
+
+| .pdf | .html                      |              .md               | .png |
+|:----:|----------------------------|:------------------------------:|:----:|
+|  /   | [html](./markdown_card.md) | [md](./markdown_card.markdown) |  /   |
 
 # Informations
 
