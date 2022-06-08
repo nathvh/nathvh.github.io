@@ -49,7 +49,7 @@ Je vais te citer ici plusieurs cas d'usage :
 ## Liens et sources
 
 Excepté dans les _aide-mémoires_, une profusion de liens te sera donner. Des
-liens [Wikipedia](https://fr.wikipedia.org/) afin que tu puisses mieux comprendre les sujets, les abréviations, les
+liens [Wikipédia](https://fr.wikipedia.org/) afin que tu puisses mieux comprendre les sujets, les abréviations, les
 concepts, mais aussi des liens plus techniques ou pratiques.
 
 ## Multi auteurs

@@ -1,0 +1,302 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Dev Pratique | REST (2022.06.08)</title>
+  
+
+  <link rel="icon" href="/images/book-48.png">
+
+  <link rel="stylesheet" href="/template-files/styles/main.css" media="all">
+  
+  
+  <link rel="stylesheet" href="/css/main.css" media="all">
+  
+  
+  
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="wrapper">
+      <a class="site-title" href="">
+        Dev Pratique
+      </a>
+
+      
+      <nav class="site-nav">
+        <a href="#" class="menu-icon" aria-label="Menu">
+          <svg viewBox="0 0 18 15">
+            <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+            <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+            <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+          </svg>
+        </a>
+      </nav>
+      
+    </div>
+  </header>
+
+<div class="page-content">
+  <div class="wrapper">
+
+    
+    <div class="nav-screen"></div>
+    <nav class="nav-list"><ul><li><a href="/root">Root</a></li><li><a href="/java">Java</a><ul><li><a href="/java/java11_17">Changement entre Java 11 et Java 17 (2022.05.26)</a></li></ul></li><li><a href="/transverse">Transverse</a><ul><li><a href="/transverse/rest">REST (2022.06.08)</a></li></ul></li><li><a href="/misc">Divers</a><ul><li><a href="/misc/markdown">Markdown (2022.06.08)</a></li></ul></li><li><a href="/about">About</a><ul></ul></li></ul></li></nav>
+    
+
+    <div class="page-content-main">
+      <article class="post">
+        <header class="post-header">
+          
+          <h1 class="post-title">REST (2022.06.08)</h1>
+        </header>
+
+        
+        <div>
+          <p><strong>Page Content</strong></p>
+          <div class="section-nav"><ul class="toc"><li><a href="#en-rsum">En résumé</a></li><li><a href="#http">HTTP</a><ul><li><a href="#mthodes">Méthodes</a></li><li><a href="#uri-exemples">URI & exemples</a></li><li><a href="#hirarchisation">Hiérarchisation</a></li><li><a href="#code-retour">Code retour</a><ul><li><a href="#code-dtat">Code d'état</a></li><li><a href="#les-basiques">Les basiques</a></li></ul></li></ul></li></ul></div>
+        </div>
+        
+
+        <div class="post-content"><h1 id="en-résumé">En résumé</h1>
+<ul>
+<li><strong>Re</strong>presentational <strong>S</strong>tate <strong>T</strong>ransfer</li>
+<li>style d&#39;architecture par services web</li>
+<li>utilisation du protocole <a href="https://fr.wikipedia.org/wiki/Hypertext_Transfer_Protocol">HTTP</a>
+/<a href="https://fr.wikipedia.org/wiki/HyperText_Transfer_Protocol_Secure">HTTPS</a><ul>
+<li><a href="https://fr.wikipedia.org/wiki/Liste_des_codes_HTTP?tableofcontents=1">codes retours</a></li>
+<li>informations dans body/header</li>
+<li>surtout GET, POST, PUT et DELETE</li>
+<li>mais aussi HEAD, PATCH, CONNECT, OPTIONS et TRACE</li>
+</ul>
+</li>
+<li>interopérabilité des systèmes</li>
+<li>pas d&#39;<a href="https://fr.wikipedia.org/wiki/%C3%89tat_(informatique)">état</a>&nbsp;: stateless</li>
+<li>mise en cache</li>
+</ul>
+<h1 id="http">HTTP</h1>
+<h2 id="méthodes">Méthodes</h2>
+<table>
+<thead>
+<tr>
+<th align="left">Méthode</th>
+<th align="left">Utilisation</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">GET</td>
+<td align="left">Récupération de ressource, n&#39;a aucun impact sur cette dernière</td>
+</tr>
+<tr>
+<td align="left">POST</td>
+<td align="left">Envoi de données afin de gérer, modifier ou ajouter des données</td>
+</tr>
+<tr>
+<td align="left">PUT</td>
+<td align="left">Remplacement ou ajout d&#39;une ressource</td>
+</tr>
+<tr>
+<td align="left">DELETE</td>
+<td align="left">Suppression d&#39;une ressource du serveur</td>
+</tr>
+<tr>
+<td align="left">PATCH</td>
+<td align="left">Modification partielle d&#39;une ressource</td>
+</tr>
+<tr>
+<td align="left">HEAD</td>
+<td align="left">Récupération d&#39;information sur la ressource sans demander la ressource</td>
+</tr>
+<tr>
+<td align="left">OPTIONS</td>
+<td align="left">Récupération des options de communication</td>
+</tr>
+<tr>
+<td align="left">CONNECT</td>
+<td align="left">Permet l&#39;usage d&#39;un proxy</td>
+</tr>
+<tr>
+<td align="left">TRACE</td>
+<td align="left">Le serveur doit retourner les données reçues, pour test ou diagnostic</td>
+</tr>
+</tbody></table>
+<h2 id="uri--exemples">URI &amp; exemples</h2>
+<table>
+<thead>
+<tr>
+<th align="left">Méthodes</th>
+<th align="left">URI</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">POST</td>
+<td align="left"><nobr>api/fiches</nobr></td>
+<td align="left">crée une fiche grâce aux données dans le corps de la requête. Le retour doit fournir l&#39;id de la nouvelle fiche</td>
+</tr>
+<tr>
+<td align="left">GET</td>
+<td align="left"><nobr>api/fiches       </nobr></td>
+<td align="left">récupère toutes les fiches Devrait être paginée</td>
+</tr>
+<tr>
+<td align="left">GET</td>
+<td align="left"><nobr>api/fiches/{uid} </nobr></td>
+<td align="left">récupère une seule fiche dont l&#39;identifiant unique est {uid}</td>
+</tr>
+<tr>
+<td align="left">PUT</td>
+<td align="left"><nobr>api/fiches/{uid} </nobr></td>
+<td align="left">modifie la fiche avec l&#39;identifiant unique {uid} dont les informations sont dans le corps de la requête</td>
+</tr>
+<tr>
+<td align="left">DELETE</td>
+<td align="left"><nobr>api/fiches/{uid} </nobr></td>
+<td align="left">supprime la fiche avec l&#39;identifiant unique {uid}</td>
+</tr>
+</tbody></table>
+<h2 id="hiérarchisation">Hiérarchisation</h2>
+<table>
+<thead>
+<tr>
+<th align="left">URI</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><nobr><a href="http://mywebsite.com/fiches">http://mywebsite.com/fiches</a> </nobr></td>
+<td align="left">toutes les fiches</td>
+</tr>
+<tr>
+<td align="left"><nobr><a href="http://mywebsite.com/fiches/42">http://mywebsite.com/fiches/42</a> </nobr></td>
+<td align="left">la fiche 42</td>
+</tr>
+<tr>
+<td align="left"><nobr><a href="http://mywebsite.com/fiches/42/versions">http://mywebsite.com/fiches/42/versions</a> </nobr></td>
+<td align="left">toutes les versions de la fiche 42</td>
+</tr>
+<tr>
+<td align="left"><nobr><a href="http://mywebsite.com/fiches/42/versions/8">http://mywebsite.com/fiches/42/versions/8</a> </nobr></td>
+<td align="left">la version 8 de la fiche 42</td>
+</tr>
+</tbody></table>
+<h2 id="code-retour">Code retour</h2>
+<h3 id="code-détat">Code d&#39;état</h3>
+<table>
+<thead>
+<tr>
+<th align="center">Code d&#39;état</th>
+<th align="left">État</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">1xx</td>
+<td align="left">Informations</td>
+</tr>
+<tr>
+<td align="center">2xx</td>
+<td align="left">Succès</td>
+</tr>
+<tr>
+<td align="center">3xx</td>
+<td align="left">Redirection</td>
+</tr>
+<tr>
+<td align="center">4xx</td>
+<td align="left">Erreur client</td>
+</tr>
+<tr>
+<td align="center">5xx</td>
+<td align="left">Erreur serveur</td>
+</tr>
+</tbody></table>
+<h3 id="les-basiques">Les basiques</h3>
+<table>
+<thead>
+<tr>
+<th align="left">Code</th>
+<th align="left">Message</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">200</td>
+<td align="left"><nobr>OK</nobr></td>
+<td align="left">Le code par défaut en cas de succès</td>
+</tr>
+<tr>
+<td align="left">201</td>
+<td align="left"><nobr>Created</nobr></td>
+<td align="left">La ressource a été créée avec succès</td>
+</tr>
+<tr>
+<td align="left">204</td>
+<td align="left"><nobr>No-content</nobr></td>
+<td align="left">L&#39;action est réussie mais le corps retour est vide</td>
+</tr>
+<tr>
+<td align="left">401</td>
+<td align="left"><nobr>Unauthorized</nobr></td>
+<td align="left">Authentification nécessaire</td>
+</tr>
+<tr>
+<td align="left">403</td>
+<td align="left"><nobr>Forbidden</nobr></td>
+<td align="left">Authentification et droits nécessaires</td>
+</tr>
+<tr>
+<td align="left">404</td>
+<td align="left"><nobr>Not Found</nobr></td>
+<td align="left">La ressource ou l’URI n&#39;existe pas</td>
+</tr>
+<tr>
+<td align="left">500</td>
+<td align="left"><nobr>Internal Server Error</nobr></td>
+<td align="left">Erreur générique côté serveur</td>
+</tr>
+<tr>
+<td align="left">504</td>
+<td align="left"><nobr>Gateway Time-out</nobr></td>
+<td align="left">Le serveur n&#39;a pas répondu dans le temps imparti</td>
+</tr>
+</tbody></table>
+<hr>
+<p><em>Cette fiche a été publiée en premier sur <a href="https://nathvh.github.io/">https://nathvh.github.io/</a> par <a href="/about#nathaniel">Nathaniel</a> sous
+licence <a href="https://creativecommons.org/licenses/by/4.0/">Attribution 4.0 International</a></em></p>
+</div>
+      </article>
+
+      <footer class="site-footer">
+
+        
+
+        
+        <div class="footer-fine-print"><p>Ce site est en cours de construction. Il est susceptible de changer, de déménager, de disparaître, ou autre, du jour au lendemain, sans préavis.<p><p><strong>NOTE : </strong>l'icône du livre est sous licence <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank">Creative Commons (Attribution 3.0 Unported)</a>, et a été créé par <a href="https://www.iconfinder.com/laurareen">Laura Reen</a>.</p></div>
+        
+
+        
+        <div class="footer-links">
+          
+          <div><a href="https://github.com/nathvh/nathvh.github.io" target="_blank" rel="noopener">Github</a></div>
+          
+        </div>
+        
+
+      </footer>
+    </div>
+
+  </div>
+</div>
+
+<script src="/template-files/js/main.js"></script>
+
+
+</body>
+
+</html>
